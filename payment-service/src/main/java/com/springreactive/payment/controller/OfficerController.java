@@ -27,4 +27,9 @@ public class OfficerController {
     public Flux<Officer> getOfficer(@PathVariable("lastname") String lastname){
         return repository.findByLastname(lastname);
     }
+    
+    @GetMapping("/plain_str")
+    public String getPlainStr(){
+        return "Hello Peggy From Service 1";
+    }
 }
